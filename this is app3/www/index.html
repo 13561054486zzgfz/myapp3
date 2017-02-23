@@ -17,7 +17,7 @@
 		var oBtn1=document.getElementById('btn1');
 		var oBtn2=document.getElementById('btn2');
 		var oBtn3=document.getElementById('btn3');
-		
+		var oBtn4=document.getElementById('btn4');
 		oBtn.onclick=function(){
 			alert('页面加载了');
 			
@@ -42,6 +42,9 @@
 				alert('点击一下')	
 			},'智能社想获取您的位置','同意,取消')
 		};
+		oBtn4.onclick=function(){
+			alert('被骗了吧');
+		};
 		
 			
 	},false)
@@ -53,5 +56,6 @@
 <input type="button" value="报警" id="btn1"/>
 <input type="button" value="提示框" id="btn2"/>
 <input type="button" value="获取位置" id="btn3"/>
+<input type="button" value="点点有惊喜" id="btn4"/>
 </body>
 </html>
