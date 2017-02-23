@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>智能社-www.zhinegshe.com</title>
+<style>
+	body{}
+	input{ margin:20px auto; display:block;}
+</style>
+<script type="text/javascript" src="cordova.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var oBtn=document.getElementById('btn');
+		var oBtn1=document.getElementById('btn1');
+		var oBtn2=document.getElementById('btn2');
+		var oBtn3=document.getElementById('btn3');
+		
+		oBtn.onclick=function(){
+			alert('页面加载了');
+			
+			navigator.notification.vibrate(2000);	
+		};
+		oBtn1.onclick=function(){
+			alert('页面加载了');
+			
+			navigator.notification.beep(2);	
+		};
+		oBtn2.onclick=function(){
+			alert('页面加载了');
+			
+			navigator.notification.alert("给我们的软件点个赞！", function(){
+				alert('点击一下')	
+			},'标题：智能社弹出框','我是一个按钮')
+		};
+		oBtn3.onclick=function(){
+			alert('页面加载了');
+			
+			navigator.notification.alert("宁是否同意获取您的位置！", function(){
+				alert('点击一下')	
+			},'智能社想获取您的位置','同意,取消')
+		};
+		
+			
+	},false)
+</script>
+</head>
+
+<body>
+<input type="button" value="震动" id="btn"/>
+<input type="button" value="报警" id="btn1"/>
+<input type="button" value="提示框" id="btn2"/>
+<input type="button" value="获取位置" id="btn3"/>
+</body>
+</html>
